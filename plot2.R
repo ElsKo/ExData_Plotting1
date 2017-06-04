@@ -27,19 +27,3 @@ plot(datasubset$Global_active_power ~ datasubset$DateTime
      , xlab = ""
      , ylab = "Global Active Power (kilowatts)")
 dev.off()
-
-#plot3
-png(file="plot3.png",width=480,height=480)
-plot(datasubset$Sub_metering_1 ~ datasubset$DateTime
-     , type = "l"
-      ,col = "black"
-     , xlab = ""
-     , ylab = "Energy sub metering")
-lines(datasubset$Sub_metering_2 ~ datasubset$DateTime
-      ,col = "red")
-lines(datasubset$Sub_metering_3 ~ datasubset$DateTime
-      ,col = "blue")
-legend("topright"
-       , c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3")
-       , lty=1, lwd=1, col=c("black", "red", "blue"))
-dev.off()
